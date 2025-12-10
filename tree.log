@@ -1,0 +1,204 @@
+.
+├── LICENSE
+├── README.md
+├── data
+│   ├── KBQA-mhqg-wq
+│   │   ├── entity2id.json
+│   │   ├── entityType2id.json
+│   │   ├── relation2id.json
+│   │   └── vocab2id.json
+│   ├── Pretrained Models
+│   │   └── mhqg-pq
+│   │       └── graph2seq_ae
+│   │           ├── metrics
+│   │           │   └── metrics.log
+│   │           └── params.saved
+│   ├── data_of_Graph2Seq4KGQG.tar.gz
+│   ├── glove.840B.300d.txt
+│   ├── glove.840B.300d.zip
+│   ├── mhqg-pq
+│   │   ├── dev.json
+│   │   ├── raw
+│   │   │   ├── dev.src
+│   │   │   ├── dev.tgt
+│   │   │   ├── dev_answer.src
+│   │   │   ├── test.src
+│   │   │   ├── test.tgt
+│   │   │   ├── test_answer.src
+│   │   │   ├── train.src
+│   │   │   ├── train.tgt
+│   │   │   └── train_answer.src
+│   │   ├── src-test.txt
+│   │   ├── src-train.txt
+│   │   ├── src-val.txt
+│   │   ├── test.json
+│   │   ├── tgt-test.txt
+│   │   ├── tgt-train.txt
+│   │   ├── tgt-val.txt
+│   │   ├── train.json
+│   │   └── vocab_model_min3
+│   ├── mhqg-wq
+│   │   ├── dev.json
+│   │   ├── raw
+│   │   │   ├── ComplexWebQuestions_dev.json
+│   │   │   ├── ComplexWebQuestions_test.json
+│   │   │   ├── ComplexWebQuestions_train.json
+│   │   │   ├── answer_list.txt
+│   │   │   ├── data.json
+│   │   │   ├── ent_dict_list.txt
+│   │   │   ├── entity_dict.txt
+│   │   │   ├── entity_embed_dict.txt
+│   │   │   ├── mid2ents.pkl
+│   │   │   ├── mid2ents_extra.pkl
+│   │   │   ├── new_queries.txt
+│   │   │   ├── new_querys.txt
+│   │   │   ├── querys.txt
+│   │   │   ├── rel_dict.txt
+│   │   │   ├── rel_embed_dict.txt
+│   │   │   ├── subgraph.txt
+│   │   │   ├── subgraph_answer.txt
+│   │   │   └── subgraph_nl.pkl
+│   │   ├── src-test.txt
+│   │   ├── src-train.txt
+│   │   ├── src-val.txt
+│   │   ├── test.json
+│   │   ├── tgt-test.txt
+│   │   ├── tgt-train.txt
+│   │   ├── tgt-val.txt
+│   │   ├── train.json
+│   │   └── vocab_model_min3
+│   └── paraphrase-en
+├── images
+│   └── arch.png
+├── out
+│   └── mhqg-wq
+│       └── graph2seq_ae
+│           ├── config.json
+│           └── metrics
+│               └── metrics.log
+├── pyproject.toml
+├── requirements.txt
+├── src
+│   ├── config
+│   │   ├── mhqg-pq
+│   │   │   ├── graph2seq.yml
+│   │   │   ├── graph2seq_edge_emb.yml
+│   │   │   ├── rl_graph2seq.yml
+│   │   │   └── rl_graph2seq_edge_emb.yml
+│   │   └── mhqg-wq
+│   │       ├── graph2seq.yml
+│   │       ├── graph2seq_edge_emb.yml
+│   │       ├── graph2seq_kb.yml
+│   │       ├── rl_graph2seq.yml
+│   │       └── rl_graph2seq_edge_emb.yml
+│   ├── core
+│   │   ├── __pycache__
+│   │   │   ├── model.cpython-311.pyc
+│   │   │   └── model_handler.cpython-311.pyc
+│   │   ├── evaluation
+│   │   │   ├── README.md
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   └── eval.cpython-311.pyc
+│   │   │   ├── bleu
+│   │   │   │   ├── LICENSE
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── __pycache__
+│   │   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   │   ├── bleu.cpython-311.pyc
+│   │   │   │   │   └── bleu_scorer.cpython-311.pyc
+│   │   │   │   ├── bleu.py
+│   │   │   │   └── bleu_scorer.py
+│   │   │   ├── cider
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── __pycache__
+│   │   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   │   ├── cider.cpython-311.pyc
+│   │   │   │   │   └── cider_scorer.cpython-311.pyc
+│   │   │   │   ├── cider.py
+│   │   │   │   └── cider_scorer.py
+│   │   │   ├── eval.py
+│   │   │   ├── meteor
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── __pycache__
+│   │   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   │   └── meteor.cpython-311.pyc
+│   │   │   │   ├── legacy_meteor.py
+│   │   │   │   ├── meteor-1.5.jar
+│   │   │   │   └── meteor.py
+│   │   │   └── rouge
+│   │   │       ├── __init__.py
+│   │   │       ├── __pycache__
+│   │   │       │   ├── __init__.cpython-311.pyc
+│   │   │       │   └── rouge.cpython-311.pyc
+│   │   │       └── rouge.py
+│   │   ├── layers
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── attention.cpython-311.pyc
+│   │   │   │   ├── common.cpython-311.pyc
+│   │   │   │   └── graphs.cpython-311.pyc
+│   │   │   ├── attention.py
+│   │   │   ├── common.py
+│   │   │   └── graphs.py
+│   │   ├── model.py
+│   │   ├── model_handler.py
+│   │   ├── models
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── graph2seq.cpython-311.pyc
+│   │   │   │   └── seq2seq.cpython-311.pyc
+│   │   │   ├── graph2seq.py
+│   │   │   └── seq2seq.py
+│   │   └── utils
+│   │       ├── __init__.py
+│   │       ├── __pycache__
+│   │       │   ├── __init__.cpython-311.pyc
+│   │       │   ├── bert_utils.cpython-311.pyc
+│   │       │   ├── constants.cpython-311.pyc
+│   │       │   ├── data_utils.cpython-311.pyc
+│   │       │   ├── eval_utils.cpython-311.pyc
+│   │       │   ├── generic_utils.cpython-311.pyc
+│   │       │   ├── io_utils.cpython-311.pyc
+│   │       │   ├── logger.cpython-311.pyc
+│   │       │   ├── padding_utils.cpython-311.pyc
+│   │       │   ├── seq_data_utils.cpython-311.pyc
+│   │       │   ├── timer.cpython-311.pyc
+│   │       │   └── vocab_utils.cpython-311.pyc
+│   │       ├── bert_utils.py
+│   │       ├── constants.py
+│   │       ├── data_utils.py
+│   │       ├── eval_utils.py
+│   │       ├── generic_utils.py
+│   │       ├── io_utils.py
+│   │       ├── logger.py
+│   │       ├── padding_utils.py
+│   │       ├── seq_data_utils.py
+│   │       ├── timer.py
+│   │       └── vocab_utils.py
+│   ├── main.py
+│   ├── qa_data_augmentation_script
+│   │   ├── data_augmentation.py
+│   │   ├── random_data_split.py
+│   │   ├── random_data_split_transformer.py
+│   │   ├── split_train_dev_from_data.py
+│   │   └── split_train_dev_from_data_transformer.py
+│   ├── run_eval.py
+│   └── scripts
+│       ├── fetch_freebase_mid2name.py
+│       ├── prepare_freebase_for_webquestions.py
+│       ├── prepare_mhqg_pq.py
+│       ├── prepare_mhqg_pq_seq.py
+│       ├── prepare_mhqg_wq.py
+│       ├── prepare_mhqg_wq_seq.py
+│       ├── prepare_pretrained_kb_embeddings.py
+│       ├── prepare_webquestions.py
+│       ├── transformer-seq2seq.sh
+│       └── utils.py
+├── tree.log
+└── uv.lock
+
+39 directories, 162 files
