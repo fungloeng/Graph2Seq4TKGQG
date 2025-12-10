@@ -1,7 +1,6 @@
 # Graph2Seq-for-KGQG (PyTorch, uv)
 Code and data for [“Toward Subgraph Guided Knowledge Graph Question Generation with Graph Neural Networks”](https://arxiv.org/abs/2004.06015).
 
-![Model architecture.]
 
 ## Environment (uv)
 ```bash
